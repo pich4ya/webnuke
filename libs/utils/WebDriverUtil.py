@@ -35,7 +35,7 @@ class WebDriverUtil:
 		profile.update_preferences()
 		
 		capabilities = webdriver.DesiredCapabilities().FIREFOX
-		capabilities["marionette"] = False
+		capabilities["marionette"] = True
 		newdriver = webdriver.Firefox(firefox_profile=profile, capabilities=capabilities)
 		
 		#newdriver = webdriver.Firefox(firefox_profile=profile)
@@ -54,7 +54,7 @@ class WebDriverUtil:
 		profile = self.getWebDriverProfile()
 		profile.update_preferences()
 		capabilities = webdriver.DesiredCapabilities().FIREFOX
-		capabilities["marionette"] = False
+		capabilities["marionette"] = True
 		newdriver = webdriver.Firefox(firefox_profile=profile, capabilities=capabilities)
 		#self.driver = self.getDriverWithProxySupport('localhost', webnuke_config_proxy_port)
 		return newdriver
